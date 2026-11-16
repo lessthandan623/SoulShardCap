@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.1 (2026-11-16)
+- No gameplay changes. The version number now comes from the release automatically, and `/ssc debug` shows it.
+- Releases now upload to CurseForge automatically.
+
 ## 1.2.0 (2026-11-16)
 - Scans the extra bag slot (bag 5, shown as "Reagent Bag" in the modern UI). Soul bags such as the Box of Souls can sit there.
 - Recognizes soul bags by name ("Soul", "Felcloth") as well as by the game's soul-bag flag.
