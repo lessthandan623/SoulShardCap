@@ -45,6 +45,14 @@ The **Delete extra Soul Shard** button shows up only while you're over the limit
 2. Open `World of Warcraft\_forever_\WTF\Account\<YOUR ACCOUNT>\SavedVariables\SoulShardCap.lua` in Notepad and copy the lines under `log`.
 3. Open an issue with the log, your soul bag's name and size, and what you expected to happen.
 
+## Releasing a new version (maintainer notes)
+
+1. Add the changes to the top of `CHANGELOG.md` and push.
+2. On GitHub, go to **Releases** and choose **Draft a new release**. Create a new tag such as `v1.3.0-beta`, then click **Publish release**.
+3. The "Package and release" workflow under the **Actions** tab builds the zip, attaches it to the GitHub release, and uploads it to CurseForge.
+   - A tag with `beta` in it uploads as a Beta file, one with `alpha` as an Alpha file, and a plain `v1.3.0` as a full Release.
+   - The version number in the addon comes from the tag automatically.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).

@@ -2,7 +2,7 @@
 ## Title: Soul Shard Cap
 ## Notes: Keeps Soul Shards from overflowing your Soul Bag. Extra shards are deleted on your next key press.
 ## Author: Dan
-## Version: 1.2.0
+## Version: @project-version@
 ## SavedVariables: SoulShardCapDB
 ## X-Curse-Project-ID: 1810508
 

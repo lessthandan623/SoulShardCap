@@ -1,5 +1,5 @@
 --[[
-  Soul Shard Cap  -  for World of Warcraft: Forever (Warlock)   v1.2.0
+  Soul Shard Cap  -  for World of Warcraft: Forever (Warlock)
 
   Your Soul Bag's size is your shard limit. 16-slot bag = 16 shards max.
   When a new shard goes over that limit, it is deleted on your NEXT key press
@@ -243,7 +243,8 @@ end
 local function Report()
     Say("|cffffff00---- Diagnostic report (please copy or screenshot all of this) ----|r")
     local version, build, _, iface = GetBuildInfo()
-    Say(("Game %s build %s, interface %s. Addon v1.2.0"):format(tostring(version), tostring(build), tostring(iface)))
+    local addonVersion = (C_AddOns and C_AddOns.GetAddOnMetadata and C_AddOns.GetAddOnMetadata(ADDON_NAME, "Version")) or "?"
+    Say(("Game %s build %s, interface %s. Addon %s"):format(tostring(version), tostring(build), tostring(iface), tostring(addonVersion)))
     Say(("Enabled: %s | manual limit: %s | in combat: %s"):format(
         tostring(db.enabled), tostring(db.manualMax), tostring(InCombatLockdown())))
 

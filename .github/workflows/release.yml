@@ -1,0 +1,26 @@
+# Builds the addon zip and uploads it to CurseForge and to the GitHub release
+# whenever a release is published on GitHub.
+# Tag names decide the CurseForge file type: "v1.3.0-beta" uploads as Beta,
+# "v1.3.0-alpha" as Alpha, and a plain "v1.3.0" as Release.
+name: Package and release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # lets the packager attach the zip to the GitHub release
+    env:
+      CF_API_KEY: ${{ secrets.CF_API_KEY }}
+      GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # the packager needs the full tag history
+
+      - name: Package and upload
+        uses: BigWigsMods/packager@v2
