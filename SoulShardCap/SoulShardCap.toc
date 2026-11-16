@@ -1,0 +1,8 @@
+## Interface: 16001
+## Title: Soul Shard Cap
+## Notes: Keeps Soul Shards from overflowing your Soul Bag. Extra shards are deleted on your next key press.
+## Author: Dan
+## Version: 1.2.0
+## SavedVariables: SoulShardCapDB
+
+SoulShardCap.lua
