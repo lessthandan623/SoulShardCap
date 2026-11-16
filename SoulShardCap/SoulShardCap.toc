@@ -4,5 +4,6 @@
 ## Author: Dan
 ## Version: 1.2.0
 ## SavedVariables: SoulShardCapDB
+## X-Curse-Project-ID: 1810508
 
 SoulShardCap.lua
